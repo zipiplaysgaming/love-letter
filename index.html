@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Letter 💌</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="envelope" onclick="openLetter()">
+    <div class="flap"></div>
+    <div class="paper">
+      <p id="letter" class="hidden">
+        To my love<br><br>
+        Happy belated 8 months, and Happy Girlfriend’s Day, my love 💗<br><br>
+        YAYYY its been 8 whole months since we've been together and now we're also celebrating girlfriend's day HEHEHE I LOVE YOU SO MUCH YOU'RE THE BEST EVER, I love spending each and everyday with you even if sometimes we fight you're always so kuchupuchu and cutu I love love love you<br>
+        — bae 🩷
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function openLetter() {
+      document.querySelector('.flap').classList.add('open');
+      document.getElementById('letter').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>

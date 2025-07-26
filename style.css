@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  background: #ffeef2;
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.envelope {
+  width: 300px;
+  height: 200px;
+  background: #ff3f81;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+.flap {
+  width: 0;
+  height: 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-bottom: 100px solid #ff3f81;
+  position: absolute;
+  top: -100px;
+  left: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.flap.open {
+  transform: rotateX(180deg);
+  transform-origin: top center;
+}
+
+.paper {
+  background: #fff;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  padding: 20px;
+  border-radius: 5px;
+  overflow-y: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+#letter {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.6;
+  white-space: pre-line;
+}
