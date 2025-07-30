@@ -1,38 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Letter 💌</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="envelope" onclick="openLetter()">
-    <div class="flap"></div>
-    <div class="paper">
-      <p id="letter" class="hidden">
-        To my love<br><br>
-        Happy belated 8 months, and Happy Girlfriend’s Day, my love 💗<br><br>
-        YAYYY its been 8 whole months since we've been together and now we're also celebrating girlfriend's day HEHEHE I LOVE YOU SO MUCH YOU'RE THE BEST EVER, I love spending each and everyday with you even if sometimes we fight you're always so kuchupuchu and cutu I love love love you, I hope you have alot of fun today, you're litreally so amazing I dont even have words for the amount of love bubbles popping right now, you always make my day so much better just by talking to you I get so happy, I'm still so shocked that a sweet awsesome sauce person like you is in love with me I wake up and ask my self have I been dreaming even if I am I hope I never wake up I don't want to lose you, I'm gonna kiss you a whole bunch the next day hehe.<br>
-        ⠀♡    ♡  ᕬ  ᕬ ♡    ♡
-        ⠀+⠀⠀♡  （⌯'-'⌯)   ♡  +
-        ⠀⠀⠀⠀⠀┏━♡━U U━♡━┓
-        ⠀⠀⠀⠀⠀*I LOVE YOU*
-        ⠀⠀⠀⠀⠀⠀┗━♡━━━♡━┛
-        It's like I'm not just in love with you, you know like I'm all *yours*, and and I know I've mentioned it alot but the day we kissed is way too magical to not mention multiple times it was so great I loved every moment of it, even though it was so unexpected I never thought we would be doing that even though I was so in love with you.<br><br>
-        Thank you for being here for me, and being silly, sweet, soft, loud, stubborn with me, I absolutely love all of those and many more things about you, I wish i could pause the world and spend an eternity with you, and every 'not passing second'( get it cuz the world is frozen) be with you.<br><br>
-        Hehe So, here's to ALOT more kisses, bunch of late night calls, alot of "I love you"s, and a gazzilion days spent together.<br><br>
-        — bae 🩷
-        
-      </p>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Girlfriend's Day</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <canvas id="heart-canvas"></canvas>
+    <div class="message-box">
+      <h1>HAPPY GIRLFRIEND'S DAY MY BABYYYY 🩷</h1>
+      <p>You’re da reason im so happy happy</p>
+      <button onclick="showLove()">Tap here</button>
+      <div id="love-message" class="hidden">
+        <p id="compliment-box"></p>
+        <a
+          href="https://zipiplaysgaming.github.io/love-letter/">Read
+          my letter →</a><br>
+        <a
+          href="https://zipiplaysgaming.github.io/photos/">Photos
+          📸</a><br>
+        <a
+          href="https://zipiplaysgaming.github.io/reasons/">Reasons
+          Why I Love You 💌</a><br>
+        <a
+          href="https://zipiplaysgaming.github.io/day-counter/">Day
+          Counter ❤️</a>
+      </div>
     </div>
-  </div>
-
-  <script>
-    function openLetter() {
-      document.querySelector('.flap').classList.add('open');
-      document.getElementById('letter').classList.remove('hidden');
+    <script src="hearts.js"></script>
+    <script>
+    function showLove() {
+      document.getElementById('love-message').classList.remove('hidden');
     }
   </script>
-</body>
+    <div id="loader">
+      <div class="heart-loader">❤️</div>
+    </div>
+
+    <script>
+  // Loading animation
+  window.addEventListener('load', () => {
+    document.getElementById('loader').style.display = 'none';
+  });
+
+  // Compliment Generator
+  function showLove() {
+    const compliments = [
+      "You light up my world like no one else",
+      "Your smile makes me go dokidoki",
+      "You're my favorite notification",
+      "You make me believe in love more each day",
+      "Your laugh is my favorite sound hehe",
+      "Even when you're grumpy, you're adorable and so cute",
+      "I could look at you forever and not get tired",
+      "You're cuter than every cat video on the internet ( you are a cat )",
+      "You make me feel lucky every single day",
+      "You're my safe and comfy space"
+    ];
+    const box = document.getElementById("compliment-box");
+    box.innerText = compliments[Math.floor(Math.random() * compliments.length)];
+    document.getElementById('love-message').classList.remove('hidden');
+  }
+</script>
+  </body>
 </html>

@@ -1,60 +1,61 @@
 body {
   margin: 0;
-  background: #ffeef2;
-  font-family: 'Courier New', Courier, monospace;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  font-family: 'Comic Sans MS', sans-serif;
+  background-color: #ffeff7;
   overflow: hidden;
 }
 
-.envelope {
-  width: 300px;
-  height: 200px;
-  background: #ff3f81;
-  position: relative;
-  border-radius: 5px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-  cursor: pointer;
-}
-
-.flap {
-  width: 0;
-  height: 0;
-  border-left: 150px solid transparent;
-  border-right: 150px solid transparent;
-  border-bottom: 100px solid #ff3f81;
-  position: absolute;
-  top: -100px;
+#heart-canvas {
+  position: fixed;
+  top: 0;
   left: 0;
-  transition: all 0.5s ease-in-out;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
 
-.flap.open {
-  transform: rotateX(180deg);
-  transform-origin: top center;
+.message-box {
+  position: relative;
+  z-index: 2;
+  padding: 40px;
+  text-align: center;
+  color: #ff3f81;
+  max-width: 600px;
+  margin: 100px auto;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 63, 129, 0.3);
 }
 
-.paper {
-  background: #fff;
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
-  padding: 20px;
-  border-radius: 5px;
-  overflow-y: auto;
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #ff3f81;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff1f6a;
+}
+
+#love-message {
+  margin-top: 20px;
 }
 
 .hidden {
   display: none;
 }
 
-#letter {
-  font-size: 14px;
-  color: #333;
-  line-height: 1.6;
-  white-space: pre-line;
+a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #ff3f81;
+  text-decoration: none;
+  font-weight: bold;
 }
+
